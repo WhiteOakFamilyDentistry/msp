@@ -1,0 +1,30 @@
+/*** SITEWIDE VARIBLES, MIXINS & STYLE RESET  ***/
+@import "base/bootstrap"; //BOOTSTRAP STYLES
+@import "base/variables"; //VARIABLE IMPORT
+@import "base/mixins"; //MIXINS IMPORT
+@import "base/reset"; //RESET IMPORT
+
+/*** JQUERY & PLUGIN STYLES ***/
+@import "vendor/gforms"; //GRAVITY FORMS STYLE RESET
+@import "vendor/fancybox"; //FANCYBOX STYLES
+@import "vendor/bxslider"; //BXSLIDER STYLES
+@import "vendor/mmenu"; //MMENU STYLES
+
+/*** ADMIN STYLES ***/
+@import "base/admin";
+
+/*** SITE STRUCTURE STYLES ***/
+@import "layout/typography"; //GLOBAL TYPOGRAPHY STYLES
+@import "layout/header"; //HEADER STYLES
+@import "layout/navigation"; //NAVIGATION STYLES
+@import "layout/body"; //MAIN BODY CONTENT STYLES
+@import "layout/footer"; //FOOTER STYLES
+@import "layout/portfolio"; //INDIVIDUAL PORTFOLIO PAGE STYLES
+
+/*** INDIVIDUAL PAGE STYLES ***/
+@import "pages/home"; //HOMEPAGE STYLES
+@import "pages/inner"; //INNER PAGE STYLES
+@import "pages/blog"; //BLOG PAGE STYLES
+@import "pages/resume"; //RESUME PAGE TEMPLATE STYLES
+@import "pages/thanks"; //THANK YOU PAGE STYLES
+@import "pages/404"; //404 ERROR PAGE STYLES

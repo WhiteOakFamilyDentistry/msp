@@ -1,0 +1,77 @@
+/*** HOMEPAGE STYLES ***/
+
+#inner-page {
+  margin-top: 100px;
+  header {
+    padding: 20px 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    h1 {
+      color: $primary;
+      @include font-size(55px);
+      font-weight: 400;
+      margin-top: 0;
+    }
+    h2 {
+      @include font-size(36px);
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+  h3 {
+    margin-top: 0;
+  }
+  .col-md-4 {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    h3 {
+      color: #000;
+      @include text-shadow($letterpress);
+      padding: 10px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+ul {
+  &.projects {
+    padding: 0;
+    margin:0;
+    text-align: center;
+    li {
+      list-style-type: none;
+      padding-bottom: 20px;
+      &:first-of-type {
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+    img {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    h4 {
+      font-weight: 400;
+      @include font-size(20px);
+      color: #000;
+      @include text-shadow($letterpress);
+    }
+    a {
+      @include alt-button;
+      @include font-size(16px);
+    }
+  }
+}
+
+/********************************/
+/****** RESPONSIVE STYLES *******/
+/********************************/
+
+
+@media only screen and (max-width: 991px)  {
+}

@@ -1,0 +1,52 @@
+/*** BASIC BODY STYLES ***/
+
+a {
+  &.scrollup {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    z-index: 99999;
+    i {
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      @include font-size(20px);
+      line-height: 100%;
+      @include transition($smooth);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      &:hover {
+        @include transition($smooth);
+        background: rgba(0, 0, 0, 0.2);
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/********************************/
+/****** RESPONSIVE STYLES *******/
+/********************************/
+
+
+@media only screen and (max-width: 1199px)  {
+  a {
+    &.scrollup {
+      right: 45px;
+    }
+  }
+}
+@media only screen and (max-width: 550px)  {
+  a {
+    &.scrollup {
+      right: 20px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/*** THANK YOU PAGE STYLES ***/
+
+#thanks {
+	margin-top: 130px;
+  text-align: center;
+  h1 {
+    @include font-size(75px);
+    color: $primary;
+    margin-bottom: 20px;
+  }
+  p {
+    @include font-size(20px);
+    color: #000;
+  }
+  a {
+    @include alt-button;
+    margin-top: 20px;
+  }
+}

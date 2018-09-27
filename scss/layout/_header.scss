@@ -1,0 +1,129 @@
+/*** HEADER STYLES ***/
+
+#header-container {
+  position: fixed;
+  overflow: auto;
+  z-index: 100;
+  top: 0;
+  height: 90px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0 5px 30px;
+  &.border {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .col-xs-7 {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    ul {
+      &.contact {
+        margin: 0;
+        li {
+          display: inline-block;
+          @include font-size(24px);
+          margin-left: 15px;
+          &:first-of-type {
+            i {
+              @include font-size(30px);
+              margin-right: 5px;
+            }
+          }
+          &:nth-of-type(2) {
+            i {
+              margin-right: 5px;
+            }
+          }
+          a {
+            color: #000;
+            @include transition($smooth);
+            &:hover {
+              @include transition($smooth);
+              color: $primary;
+            }
+          }
+          i {
+            line-height: 100%;
+            margin-top: -10px;
+          }
+        }
+      }
+    }
+  }
+  .col-xs-1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 45px;
+  }
+}
+#logo {
+  svg {
+    max-width: 150px;
+    min-width: 100px;
+    @include transition($smooth);
+    &:hover {
+      fill: $primary;
+      @include transition($smooth);
+    }
+  }
+}
+
+
+/********************************/
+/****** RESPONSIVE STYLES *******/
+/********************************/
+
+
+@media only screen and (max-width: 850px)  {
+  #header-container {
+    .col-xs-7 {
+      ul {
+        &.contact {
+          li {
+            @include font-size(20px);
+            margin-left: 5px;
+            &:first-of-type {
+              i {
+                @include font-size(20px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 550px)  {
+  #header-container {
+    padding: 5px 15px;
+  }
+}
+@media only screen and (max-width: 400px)  {
+  #header-container {
+    .col-xs-4 {
+      padding: 0;
+    }
+    .col-xs-7 {
+      padding-left: 0;
+      ul {
+        &.contact {
+          li {
+            @include font-size(18px);
+            margin-left: 2px;
+            &:first-of-type {
+              i {
+                @include font-size(18px);
+              }
+            }
+          }
+        }
+      }
+    }
+    .col-xs-1 {
+      padding-right: 25px;
+    }
+  }
+}

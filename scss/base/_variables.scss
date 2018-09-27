@@ -1,0 +1,18 @@
+/*********************************************************/
+/***********************VARIABLES************************/
+/*******************************************************/
+
+/*** TYPOGRAPHY ***/
+$heading-font: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font: "Oswald", Frutiger, "Frutiger Linotype", Univers, Calibri, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/*** COLORS ***/
+$primary: #a7a6a6;
+$secondary: #797979;
+$third: #800808;
+
+/*** EFFECTS ***/
+$letterpress: 0 1px rgba(255, 255, 255, 0.5);
+$drop: 0 1px 1px rgba(0, 0, 0, 0.8);
+$smooth: all, .15s, ease-in-out, .15s;
+$slow: all, 2s, ease-in-out, 2s;

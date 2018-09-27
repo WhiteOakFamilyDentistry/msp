@@ -1,0 +1,157 @@
+/*** HOMEPAGE STYLES ***/
+
+#homepage {
+  overflow: auto;
+}
+#portfolio-contain {
+  margin-top: 100px;
+  header {
+    h1 {
+      color: $primary;
+      @include font-size(75px);
+      font-weight: 400;
+    }
+    h2 {
+      font-weight: 400;
+      @include font-size(24px);
+      margin-top: 0;
+    }
+  }
+}
+.portfolio-grid {
+  padding: 50px 0;
+}
+.portfolio-item {
+  height: 430px;
+  overflow: hidden;
+  padding: 0;
+  border-bottom: 15px solid #fff;
+  &.left {
+    border-left: 15px solid #fff;
+  }
+  &.middile {
+    border-right: none;
+    border-left: none;
+  }
+  &.right {
+    border-right: 15px solid #fff;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition($slow);
+    height: 460px;
+    &:hover {
+      cursor: pointer;
+      @include transform(scale(1.2));
+      .info {
+        background-color: rgba(0, 0, 0, 0.5);
+        @include transition($smooth);
+      }
+      * {
+        color: #fff;
+        @include transition($slow);
+        @include text-shadow($drop);
+      }
+      a {
+        display: inline-block;
+        @include transition($slow);
+      }
+    }
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.0);
+    @include transition($smooth);
+    text-align: center;
+    * {
+      color: transparent;
+    }
+  }
+  h1 {
+    @include font-size(36px);
+  }
+  p {
+    @include font-size(18px);
+  }
+  a {
+    @include main-button;
+    display: none;
+  }
+}
+
+/********************************/
+/****** RESPONSIVE STYLES *******/
+/********************************/
+
+
+@media only screen and (max-width: 991px)  {
+  #portfolio-contain {
+    header {
+      h1 {
+        @include font-size(55px);
+      }
+      h2 {
+        @include font-size(18px);
+      }
+    }
+  }
+  .portfolio-grid {
+    padding: 20px 0 0 0;
+  }
+  .portfolio-item {
+    border-bottom: 15px solid #fff;
+    &.left, &.right {
+      border-left: none;
+      border-right: none;
+    }
+  }
+}
+@media only screen and (max-width: 600px)  {
+  #portfolio-contain {
+    header {
+      h1 {
+        @include font-size(36px);
+      }
+      h2 {
+        @include font-size(16px);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 400px)  {
+  #portfolio-contain {
+    header {
+      h1 {
+        @include font-size(28px);
+      }
+    }
+  }
+  .portfolio-item {
+    .info {
+      h2 {
+        @include font-size(24px);
+      }
+      p {
+        @include font-size(16px);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px)  {
+  .portfolio-item {
+    .info {
+      h2 {
+        @include font-size(20px);
+      }
+      p {
+        @include font-size(14px);
+      }
+    }
+  }
+}

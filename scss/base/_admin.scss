@@ -1,0 +1,28 @@
+/*** LOGIN PAGE STYLES ***/
+
+body {
+	&.login {
+	}
+}
+.login {
+	h1 {
+		a {
+			width: 300px;
+			height: 250px;
+			background: url(../images/login-logo.png) no-repeat 50% 50%;
+		}
+	}
+}
+#login {
+	p {
+		&#nav, &#backtoblog {
+			a {
+				@include transition($smooth);
+				&:hover {
+					@include transition($smooth);
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,112 @@
+/*************************************************************/
+/********************* NAVIGATION STYLES *********************/
+/*************************************************************/
+
+
+
+/*** SLIDEOUT MOBILE NAVIGATION ***/
+
+
+//HAMBURGER NAV
+.slideout-show {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  @include transition($smooth);
+  &:focus {
+    text-decoration: none;
+  }
+  &:hover {
+    @include transition($smooth);
+    background: #000;
+    i {
+      @include transition($smooth);
+      color: #fff;
+    }
+  }
+  i {
+    @include font-size(30px);
+    color: #000;
+  }
+}
+//MOBILE NAVIGATION STYLES
+.container-fluid {
+  &.mm-page {
+    padding: 0;
+  }
+}
+.mm-title {
+  font-family: $heading-font;
+  @include font-size(18px);
+  font-weight: 700;
+}
+.mm-listview {
+  li {
+    &:before {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      font-family: FontAwesome;
+      @include font-size(22px);
+      color: $third;
+    }
+    &:hover {
+      &:before {
+        color: #fff;
+      }
+    }
+    &:first-of-type {
+      &:before {
+         content: "\f015";
+      }
+    }
+    &:nth-of-type(2) {
+      &:before {
+         content: "\f00b";
+      }
+    }
+    &:nth-of-type(3) {
+      &:before {
+         content: "\f2bc";
+      }
+    }
+    &:nth-of-type(4) {
+      &:before {
+         content: "\f044";
+      }
+    }
+    a {
+      font-family: $heading-font;
+      @include font-size(28px);
+      @include transition($smooth);
+      text-transform: uppercase;
+      padding: 20px 20px 20px 50px;
+      &:hover {
+        background: $third;
+        @include transition($smooth);
+        color: #fff;
+      }
+    }
+  }
+}
+.mm-panels {
+}
+
+
+
+/********************************/
+/****** RESPONSIVE STYLES *******/
+/********************************/
+
+
+@media only screen and (max-width: 767px)  {
+  .slideout-show {
+    i {
+      @include font-size(22px);
+    }
+  }
+}
